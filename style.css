@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #0f0f;
+  --secondary-color: #222;
+  --text-color: #333333;
+  --bg-color: black;
+}
+
+
 body {
     margin: 0%;
     padding: 0%;
@@ -6,7 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    background: black;
+    background: var(--bg-color);
 }
 
 section {
@@ -30,12 +38,12 @@ section {
     width: calc(5.25vw - 2px);
     display: block;
     z-index: 1;
-    background-color: #222;
+    background-color: var(--secondary-color);
     transition: 1.5s;
 }
 
 .sp:hover {
-    background-color: #0f0f;
+    background-color: var(--primary-color);
     transition: 0s;
 }
 
@@ -46,7 +54,8 @@ section::before {
     height: 100%;
     z-index: -2;
     height: 100%;
-    background: linear-gradient(black, black, #0f0f, black, black);
+    background: linear-gradient(var(--bg-color), var(--bg-color), var(--primary-color), 
+                var(--bg-color), var(--bg-color));
     animation: ani 5s linear infinite;
 }
 
@@ -65,13 +74,13 @@ section .signin {
     width: 300px;
     z-index: 10;
 
-    background: #222;
+    background: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 1px 1px 30px black;
+    box-shadow: 1px 1px 30px var(--bg-color);
 
 }
 
@@ -85,7 +94,7 @@ section .signin .content {
 }
 
 section .signin .content h2 {
-    color: #0f0f;
+    color: var(--primary-color);
     font-size: 2em;
 
 }
@@ -111,7 +120,7 @@ section .signin .content .form .ib input {
     outline: none;
     padding: 25px 10px 7.5px;
     font-weight: 500;
-    border-bottom: 2px solid #0f0f;
+    border-bottom: 2px solid var(--primary-color);
     color: white;
     font-size: 1em;
 }
@@ -148,7 +157,7 @@ section .signin .content .form .link a {
 }
 
 section .signin .content .form .link a:nth-child(2) {
-    color: #0f0f;
+    color: var(--primary-color);
     font-weight: 600;
 
 }
@@ -164,15 +173,15 @@ section .signin .content .form .n {
 }
 
 .b {
-    background-color: #0f0f;
+    background-color: var(--primary-color);
     border: none;
     outline: none;
     width: 80px;
     height: 30px;
-    box-shadow: 1px 1px 30px black;
+    box-shadow: 1px 1px 30px var(--bg-color);
 
 }
 
 .b:hover {
-    box-shadow: 1px 1px 30px #0f0f;
+    box-shadow: 1px 1px 30px var(--primary-color);
 }
